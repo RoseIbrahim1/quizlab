@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="quiz-container">
+        <!-- App Branding -->
+        <div class="app-brand">
+            <div class="brand-icon">Q</div>
+
+            <div class="brand-info">
+                <span class="brand-name">QUIZLAB</span>
+                <span class="brand-tagline">Test your knowledge</span>
+            </div>
+        </div>
+
+        <!-- Welcome Screen -->
+        <div id="start-screen" class="screen">
+            <h1>Welcome to Quiz App!</h1>
+            <p>Test your knowledge and see how much you know.</p>
+            <button id="start-btn">Start Quiz</button>
+        </div>
+
+        <!-- Category Selection Screen -->
+        <div id="category-screen" class="screen hidden">
+
+            <h1>Choose Your Category</h1>
+            <p>Select a topic and test your knowledge.</p>
+
+            <div id="categories-container">
+
+                <button class="category-btn" data-category="programming">
+                    <span class="category-icon">💻</span>
+                    <span>Programming</span>
+                    <small>HTML, CSS, JavaScript</small>
+                </button>
+
+                <button class="category-btn" data-category="science">
+                    <span class="category-icon">🔬</span>
+                    <span>Science</span>
+                    <small>Physics, Chemistry, Biology</small>
+                </button>
+
+                <button class="category-btn" data-category="geography">
+                    <span class="category-icon">🌍</span>
+                    <span>Geography</span>
+                    <small>Countries and capitals</small>
+                </button>
+
+                <button class="category-btn" data-category="general">
+                    <span class="category-icon">🧠</span>
+                    <span>General Knowledge</span>
+                    <small>Mixed questions</small>
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="screen hidden">
+            <div class="quiz-header">
+                <span id="question-number"></span>
+                <span id="score">Score: 0</span>
+            </div>
+
+            <div class="progress-bar">
+                <div id="progress"></div>
+            </div>
+
+            <div class="question-section">
+                <span class="question-category">GENERAL KNOWLEDGE</span>
+                <h2 id="question"></h2>
+            </div>
+
+            <div id="answers-container"></div>
+
+            <button id="next-btn" disabled>Next</button>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="result-screen" class="screen hidden">
+            <h1>Quiz Completed!</h1>
+            <h2 id="final-score"></h2>
+            <p id="result-message"></p>
+            <button id="restart-btn">Try Again</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
